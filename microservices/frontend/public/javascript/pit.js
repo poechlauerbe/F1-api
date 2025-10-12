@@ -1,5 +1,5 @@
 function loadSite () {
-  fetch('/api/pit')
+  fetch('http://localhost:3000/api/pit')
     .then(response => response.json())
     .then(data => {
       const pitDiv = document.getElementById('pit');

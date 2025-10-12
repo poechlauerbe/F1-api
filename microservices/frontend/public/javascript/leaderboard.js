@@ -1,5 +1,5 @@
 function loadSite () {
-  fetch('/api/driversbyposition')
+  fetch('http://localhost:3000/api/driversbyposition')
     .then(response => response.json())
     .then(data => {
       const positionsDiv = document.getElementById('positions');

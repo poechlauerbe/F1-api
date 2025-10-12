@@ -66,44 +66,6 @@ const { addSchedule, getSchedule } = require('./services/obj_schedule');
 const { getPitStops, addPitStop, deletePitStops } = require('./services/obj_pits');
 const { addTyre, deleteTyres, getActualTyre, getTyres } = require('./services/obj_tyres');
 
-app.set('view engine', 'ejs');
-
-// Use the routes defined in the route files
-
-const indexRouter = require('./routes/index');
-
-const driverRouter = require('./routes/drivers');
-const gplistRouter = require('./routes/gplist');
-const laptimesRouter = require('./routes/laptimes');
-const leaderboardRouter = require('./routes/leaderboard');
-const pitRouter = require('./routes/pit');
-const racecontrolRouter = require('./routes/racecontrol');
-const singleDriverRouter = require('./routes/singledriver');
-const teamradioRouter = require('./routes/teamradio');
-const trackinfoRouter = require('./routes/trackinfo');
-const racedatesRouter = require('./routes/racedates');
-const impressumRouter = require('./routes/impressum');
-
-// Serve static files from the 'public' directory
-app.use(express.static('public'));
-
-// Serve the favicon
-app.use('/favicon.ico', express.static('public/favicon.ico'));
-
-app.use('/', indexRouter);
-
-app.use('/drivers', driverRouter);
-app.use('/gplist', gplistRouter);
-app.use('/laptimes', laptimesRouter);
-app.use('/leaderboard', leaderboardRouter);
-app.use('/pit', pitRouter);
-app.use('/racecontrol', racecontrolRouter);
-app.use('/singledriver', singleDriverRouter);
-app.use('/teamradio', teamradioRouter);
-app.use('/trackinfo', trackinfoRouter);
-app.use('/racedates', racedatesRouter);
-app.use('/impressum', impressumRouter);
-
 let loadIntervalsIsFetching = false;
 let loadLocationIsFetching = false;
 let loadStintsIsFetching = false;

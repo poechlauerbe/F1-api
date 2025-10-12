@@ -4,7 +4,7 @@ let blueFlag = 0;
 // let siteLoading = false; enventually add check if site is loading to prevent multiple fetches
 
 function loadSite () {
-  fetch('/api/race_control')
+  fetch('http://localhost:3000/api/race_control')
     .then(response => response.json())
     .then(data => {
       document.getElementById('race-control').innerHTML = '';

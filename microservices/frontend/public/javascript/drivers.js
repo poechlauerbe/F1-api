@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('/api/drivers')
+  fetch('http://localhost:3000/api/drivers')
     .then(response => response.json())
     .then(data => {
       const driversDiv = document.getElementById('drivers');

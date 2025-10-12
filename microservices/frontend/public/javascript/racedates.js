@@ -11,7 +11,7 @@ const scrollDown = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('/api/schedule')
+  fetch('http://localhost:3000/api/schedule')
     .then(response => response.json())
     .then(data => {
       const gpListBaseDiv = document.getElementById('racedates');

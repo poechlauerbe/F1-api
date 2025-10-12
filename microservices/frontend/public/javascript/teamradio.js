@@ -1,7 +1,7 @@
 import { options } from './services/mod_options.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('/api/teamradio')
+  fetch('http://localhost:3000/api/teamradio')
     .then(response => response.json())
     .then(data => {
       const teamradioDiv = document.getElementById('teamradio');

@@ -6,7 +6,7 @@ let map = null;
 let sessionName = '';
 
 function loadSchedule () {
-  fetch('/api/schedule')
+  fetch('http://localhost:3000/api/schedule')
     .then(response => response.json())
     .then(data => {
       for (let i = 0; i < data.length; i++) {
@@ -33,7 +33,7 @@ function loadSchedule () {
 }
 
 function loadSite () {
-  fetch('/api/trackinfo')
+  fetch('http://localhost:3000/api/trackinfo')
     .then(response => response.json())
     .then(data => {
       trackinfoDiv.innerHTML = '';

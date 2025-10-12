@@ -36,7 +36,7 @@ const countdown = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('/api/schedule')
+  fetch('http://localhost:3000/api/schedule')
     .then(response => response.json())
     .then(data => {
       let i = 0;

@@ -1,4 +1,4 @@
-const apiString = '/api/singledriver?driverNumber=';
+const apiString = 'http://localhost:3000/api/singledriver?driverNumber=';
 let allDrivers = [];
 let actualDriver = 0;
 let carData = [];
@@ -104,7 +104,7 @@ const updateObjects = () => {
 // };
 
 const getDrivers = () => {
-  fetch('/api/drivers')
+  fetch('http://localhost:3000/api/drivers')
     .then(response => response.json())
     .then(data => {
       const driversSelect = document.getElementById('drivers');
