@@ -1,0 +1,48 @@
+.blue-flag {
+	background-color: lightblue;
+}
+
+.green-flag {
+	background-color: greenyellow;
+}
+
+.yellow-flag {
+	background-color: yellow;
+}
+
+.red-flag {
+	background-color: red;
+}
+
+.drs-enabled {
+	background-color: lightgreen;
+}
+
+.drs-disabled {
+	background-color: lightcoral;
+}
+
+.noted {
+	background-color: wheat;
+}
+
+.fia-stewards {
+	background-color: lightsalmon;
+}
+
+.penalty {
+	background-color: orange;
+}
+
+.safety-car {
+	background-color: yellow;
+}
+
+.track-limits {
+	background-color: lightgrey;
+}
+
+.finish-flag {
+	background-color: black;
+	color: white;
+}

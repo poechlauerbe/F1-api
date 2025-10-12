@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/nav') %>
+    <main>
+      <h1 class="text-center">Welcome to the world of formula 1</h1>
+      <p>
+        The idea of this project is to create an application where you can find live data during a race-weekend.The data is fetched from the openF1 API and displayed in a user-friendly way. The application is built with Node.js, Express, and EJS. The app is still in progress. If you have any suggestions or feedback, feel free to contact me.
+      </p>
+      <div id="countdown"></div>
+      <h2>Next events:</h2>
+      <div id="next-event"></div>
+      <p>These are the pages until now:</p>
+      <ul class="line-height-2">
+        <%- include('partials/pages_list') %>
+      </ul>
+      <p>Have fun!</p>
+    </main>
+    <%- include('partials/footer') %>
+    <script defer type="module" src="javascript/index.js"></script>
+    <script defer src="javascript/services/navbar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/nav') %>
+    <main>
+      <h1><%= headline %></h1>
+      <div id="<%- id %>"></div>
+
+      <% if (typeof extraID !== 'undefined') { %>
+        <div id="<%- extraID %>"></div>
+      <% } %>
+
+      <% if (typeof preScript !== 'undefined') { %>
+        <script src="<%= preScript %>"></script>
+      <% } %>
+    </main>
+    <%- include('partials/footer') %>
+    <script defer type="module" src="<%= script %>"></script>
+    <script defer src="javascript/services/navbar.js"></script>
+  </body>
+</html>

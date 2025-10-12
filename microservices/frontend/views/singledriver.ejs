@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <%- include('partials/nav') %>
+    <main>
+      <h1><%= headline %></h1>
+      <p>
+        In progress...
+        Features are added and need to be tested!
+        With the time button you can adjust how much time your stream/TV is behind the real event. On index page is a countdown you can use to compare with the countdown on the TV.
+      </p>
+      <div class="time-input-container">
+        <input type="text" id="time-input" value="00:20.000" />
+        <div class="timebuttons">
+          <button class="arrow-buttons" data-direction="up">▲</button>
+          <button class="arrow-buttons" data-direction="down">▼</button>
+        </div>
+      </div>
+      <select id="drivers"></select>
+      <div id="driverinfo"></div>
+      <div id="sd-elements">
+        <p id="throttle" class="throttle">Throttle</p>
+        <p id="brake" class="brake">Brake</p>
+        <p id="drs" class="drs">DRS</p>
+        <p class="sd-elem"><span id="tacho">0</span> km/h</p>
+        <p class="sd-elem"><span id="rpm">0</span> r/min</p>
+        <p class="sd-elem"><span id="gear">0</span>. gear</p>
+      </div>
+      <div id="sd-elements">
+        <p id="tyre" class="tyre">Compound</p>
+      </div>
+      <div id="base-data"></div>
+      <div id="<%- id %>"></div>
+    </main>
+    <%- include('partials/footer') %>
+    <script defer type="module" src="./javascript/singledriver.js"></script>
+    <script defer src="javascript/services/navbar.js"></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "description": "frontend microservice",
+  "repository": {
+    "type": "git",
+    "url": "poechlauerbe"
+  },
+  "license": "ISC",
+  "author": "poechlauerbe",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist/*; tsc",
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "work": "rm -rf dist/*; tsc; node dist/server.js",
+    "start": "node dist/server.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.7.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
