@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "description": "backend microservice",
+  "repository": {
+    "type": "git",
+    "url": "poechlauerbe"
+  },
+  "license": "ISC",
+  "author": "poechlauerbe",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

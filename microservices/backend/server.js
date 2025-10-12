@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const ical = require('ical');
 const fetch = (...args) =>
   import('node-fetch').then(({ default: fetch }) => fetch(...args));
@@ -7,6 +8,19 @@ const app = express();
 const port = 3000;
 let startProcess = true;
 let lastLoading = 0;
+
+const corsOptions = {
+  origin: [
+    'http://localhost:4000',
+    'http://127.0.0.1:4000',
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+};
+
+// Apply CORS middleware
+app.use(cors(corsOptions));
 
 // let lastLoadingCarData = [];
 let sessionId = 0;
