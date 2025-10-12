@@ -800,20 +800,18 @@ async function loadAllCarData () {
 async function loadSchedule () {
   try {
     const response = await fetch(
-      'https://files-f1.motorsportcalendars.com/f1-calendar_p1_p2_p3_qualifying_sprint_gp.ics'
+      'https://better-f1-calendar.vercel.app/api/calendar.ics'
     );
     const icsText = await response.text();
     const events = ical.parseICS(icsText);
+    console.log(events);
 
     for (const event of Object.values(events)) {
       addSchedule(
         event.summary,
-        event.categories[0],
         new Date(event.start),
         new Date(event.end),
-        event.location,
-        event.geo.lat,
-        event.geo.lon
+        event.location
       );
     }
     if (startProcess) {
